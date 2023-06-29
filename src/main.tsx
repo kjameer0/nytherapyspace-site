@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
     margin: 0;
     color: ${(props) => (props.$whiteColor ? 'white' : 'black')};
     background-color: ${(props) => (props.$blackBackground ? 'black' : 'white')};
+    min-width: 375px;
   }
 
 `;
