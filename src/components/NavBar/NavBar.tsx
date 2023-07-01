@@ -8,9 +8,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MobileLogo from '../../assets/therapy-space-mobile.png';
 
 export const links = ['home', 'about', 'services', 'specialties', 'resources', 'contact'];
-
-export default function NavBar() {
-  const [open, setOpen] = useState(false);
+interface NavBarProps {
+  setIsMounted: (a: boolean) => void;
+}
+export default function NavBar({setIsMounted} : NavBarProps) {
 
   return (
     <StyledNavBar>
@@ -18,7 +19,7 @@ export default function NavBar() {
       <IconButton className='hamburger'>
         <MenuIcon fontSize="large" />
       </IconButton>
-      <Drawer></Drawer>
+      <Drawer open={true} />
     </StyledNavBar>
   );
 }

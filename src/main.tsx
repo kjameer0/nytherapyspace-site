@@ -17,12 +17,18 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
+    min-width: 375px;
+    --primary-bg: red;
   }
   body {
     margin: 0;
     color: ${(props) => (props.$whiteColor ? 'white' : 'black')};
     background-color: ${(props) => (props.$blackBackground ? 'black' : 'white')};
+    height: 2000px;
     min-width: 375px;
+  }
+  #root {
+    height: 100%;
   }
 
 `;
