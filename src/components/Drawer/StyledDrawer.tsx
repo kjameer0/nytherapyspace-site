@@ -1,32 +1,32 @@
 import { styled } from 'styled-components';
+import { OpenOptions } from 'components/NavBar/NavBar';
 const drawerWidth = '200px';
-const StyledDrawer = styled.div<{ $open: boolean }>`
-  position: sticky;
-  z-index: 2;
-  left: calc(100% - ${drawerWidth});
-  transform: translate(${drawerWidth});
+const StyledDrawer = styled.div<{ $open: OpenOptions }>`
+  position: fixed;
+  top: 0;
+  background-attachment: scroll;
+  right: calc(${drawerWidth} * -1);
+  height: 100vh;
   background-color: #a19d9d;
-  height: fit-content;
   width: ${drawerWidth};
-  animation-name: ${(props) => (props.$open ? 'slide-in' : 'slide-out')};
+  animation-name: ${(props) => props.$open};
   animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-  @keyframes slide-in {
+  @keyframes open {
     from {
-      transform: translate(${drawerWidth});
+      right: calc(${drawerWidth} * -1);
     }
     to {
-      transform: translate(calc(${drawerWidth} - 200px));
-      left: calc(100% - ${drawerWidth});
+      right: 0;
     }
   }
-  @keyframes slide-out {
+  @keyframes close {
     from {
-      transform: translate(calc(${drawerWidth} - 200px));
+      right: 0;
     }
     to {
-      transform: translate(${drawerWidth});
+      right: calc(${drawerWidth} * -1);
     }
   }
   .nav-list {

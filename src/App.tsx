@@ -4,9 +4,11 @@ import NavBar from 'components/NavBar/index';
 import { Drawer } from 'components/Drawer';
 
 function App() {
+
   return (
     <>
-      <NavBar />
+      <NavBar  />
+      <div style={{  height: '100%', backgroundColor: 'red', margin: 0 }}></div>
       <Outlet />
     </>
   );

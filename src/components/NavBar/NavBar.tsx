@@ -8,11 +8,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MobileLogo from '../../assets/therapy-space-mobile.png';
 
 export const links = ['home', 'about', 'services', 'specialties', 'resources', 'contact'];
-
+interface DrawerProps {
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<OpenOptions>>;
+}
+export type OpenOptions = '' | 'open' | 'close';
 export default function NavBar() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<OpenOptions>('');
   const [isMounted, setIsMounted] = useState(true);
-
   useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
@@ -26,12 +29,20 @@ export default function NavBar() {
       // console.log('windoe', open);
     });
   }, [open]);
+  function handleDrawerSwitch(prev: OpenOptions) {
+    //if first mounted, toggling drawer sets drawer open
+    if (prev === 'close' || prev === '') {
+      setOpen('open');
+    } else if (prev === 'open') {
+      setOpen('close');
+    }
+  }
   console.log(open);
   return (
     <StyledNavBar>
       <img className="logo" src={MobileLogo} alt="NY Therapy Space" />
-      <button onClick={() => setOpen((prev) => !prev)}>ho</button>
-      <IconButton onClick={() => setOpen((prev) => !prev)} className="hamburger">
+      <button onClick={() => handleDrawerSwitch(open)}>ho</button>
+      <IconButton onClick={() => handleDrawerSwitch(open)} className="hamburger">
         <MenuIcon fontSize="large" />
       </IconButton>
       <Drawer open={open} setOpen={setOpen} />

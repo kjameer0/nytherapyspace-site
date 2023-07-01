@@ -2,11 +2,14 @@ import { styled } from 'styled-components';
 //figure out how to correctly size images
 const StyledNavBar = styled.nav`
   position: sticky;
-  top: 0px;
-  border: 1px solid red;
   display: flex;
+  z-index: 2;
+  background-color: white;
+  top: 0px;
+  outline: red solid 10px;
   min-height: 70px;
   height: 70px;
+  width: 100%;
   .logo {
     margin-left: 10px;
     height: 69px;

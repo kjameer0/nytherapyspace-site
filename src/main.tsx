@@ -29,17 +29,7 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
   }
   #root {
     height: 100%;
-  }
-  nav{
-    z-index: 300;
-  }
-  .wrapper{
-    overflow: hidden;
-    position: sticky;
-  z-index: 2;
-  left: calc(100%);
-  height: 100vh;
-  width: 200px;
+    position: relative;
   }
 
 `;
