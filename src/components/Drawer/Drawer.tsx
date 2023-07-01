@@ -3,21 +3,14 @@ import StyledDrawer from './StyledDrawer';
 import { links } from 'components/NavBar/NavBar';
 interface DrawerProps {
   open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
-export default function Drawer({ open }: DrawerProps) {
+export default function Drawer({ open, setOpen }: DrawerProps) {
   //if open
   const [count, setCount] = useState(0);
-  useEffect(() => {
-    console.log('mounted');
-  }, []);
-
-  useEffect(() => {
-    // window.addEventListener('', () => {});
-    console.log(count);
-  }, [count]);
 
   return (
-    <StyledDrawer tabIndex={-1}>
+    <StyledDrawer className={open ? 'move-in' : 'move-out'} $open={open} tabIndex={-1}>
       <ul className="nav-list">
         {links.map((link) => (
           <li key={link} className="links-list">

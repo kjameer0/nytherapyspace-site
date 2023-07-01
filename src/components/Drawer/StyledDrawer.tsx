@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 const drawerWidth = '200px';
-const StyledDrawer = styled.div`
+const StyledDrawer = styled.div<{ $open: boolean }>`
   position: sticky;
   z-index: 2;
   left: calc(100% - ${drawerWidth});
@@ -8,8 +8,8 @@ const StyledDrawer = styled.div`
   background-color: #a19d9d;
   height: fit-content;
   width: ${drawerWidth};
-  animation-name: slide-in;
-  animation-duration: 1s;
+  animation-name: ${(props) => (props.$open ? 'slide-in' : 'slide-out')};
+  animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
   @keyframes slide-in {
@@ -24,7 +24,6 @@ const StyledDrawer = styled.div`
   @keyframes slide-out {
     from {
       transform: translate(calc(${drawerWidth} - 200px));
-      left: calc(100% - ${drawerWidth});
     }
     to {
       transform: translate(${drawerWidth});
