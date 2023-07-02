@@ -1,6 +1,8 @@
 import StyledDrawer from './StyledDrawer';
+//components        
 import NavBar, { links } from 'components/NavBar/NavBar';
 import { DrawerProps } from '../NavBar/utils-NavBar';
+import { DrawerLink } from 'components/DrawerLink';
 
 export default function Drawer({ open, setOpen }: DrawerProps) {
   // function handleSubClick
@@ -13,9 +15,7 @@ export default function Drawer({ open, setOpen }: DrawerProps) {
     <StyledDrawer $open={open} tabIndex={-1}>
       <ul className="nav-list">
         {links.map((link) => (
-          <button onClick={(e) => handleTestClick(e)} key={link} className="links-list">
-            {link}
-          </button>
+          <DrawerLink key={link} link={link}></DrawerLink>
         ))}
       </ul>
     </StyledDrawer>
