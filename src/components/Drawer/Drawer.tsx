@@ -1,7 +1,7 @@
 import StyledDrawer from './StyledDrawer';
-//components        
-import NavBar, { links } from 'components/NavBar/NavBar';
-import { DrawerProps } from '../NavBar/utils-NavBar';
+//components
+import NavBar from 'components/NavBar/NavBar';
+import { DrawerProps, links } from '../NavBar/utils-NavBar';
 import { DrawerLink } from 'components/DrawerLink';
 
 export default function Drawer({ open, setOpen }: DrawerProps) {
@@ -15,7 +15,7 @@ export default function Drawer({ open, setOpen }: DrawerProps) {
     <StyledDrawer $open={open} tabIndex={-1}>
       <ul className="nav-list">
         {links.map((link) => (
-          <DrawerLink key={link} link={link}></DrawerLink>
+          <DrawerLink key={link} link={link} />
         ))}
       </ul>
     </StyledDrawer>

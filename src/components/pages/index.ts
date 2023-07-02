@@ -4,5 +4,6 @@ import Specialties from './Specialties';
 import Blog from './Blog';
 import Fees from './Fees-insurance';
 import Contact from './Contact';
+import Services from './Services';
 
-export { Home, About, Specialties, Blog, Fees, Contact };
+export { Home, About, Specialties, Blog, Fees, Contact, Services };

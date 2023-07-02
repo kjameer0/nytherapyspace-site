@@ -8,18 +8,19 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MobileLogo from '../../assets/therapy-space-mobile.png';
 //utils
 import { OpenOptions, handleDrawerSwitch } from './utils-NavBar';
-export const links = ['home', 'about', 'services', 'specialties', 'resources', 'contact'];
+
 
 
 export default function NavBar() {
   const [open, setOpen] = useState<OpenOptions>('');
+
   useEffect(() => {
     //a click anywhere on screen dismisses drawer
     window.addEventListener(
       'click',
-      () => {
-        console.log('2');
+      function clickOff() {
         if (open !== '') setOpen('close');
+        window.removeEventListener('click', clickOff, false);
       },
       false
     );
@@ -28,7 +29,7 @@ export default function NavBar() {
   return (
     <StyledNavBar>
       <img className="logo" src={MobileLogo} alt="NY Therapy Space" />
-      <IconButton onClick={(e) => handleDrawerSwitch(e,open, setOpen)} className="hamburger">
+      <IconButton onClick={(e) => handleDrawerSwitch(e, open, setOpen)} className="hamburger">
         <MenuIcon fontSize="large" />
       </IconButton>
       <Drawer open={open} setOpen={setOpen} />

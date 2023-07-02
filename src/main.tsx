@@ -5,7 +5,7 @@ import App from "./App";
 import "./index.css";
 import { ErrorPage } from "ErrorPage";
 import { createGlobalStyle } from 'styled-components';
-import { Home, Blog, About, Specialties, Fees, Contact } from 'components/pages';
+import { Home, Blog, About, Specialties, Fees, Contact, Services } from 'components/pages';
 
 const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?: boolean }>`
   :root {
@@ -46,7 +46,8 @@ const router = createBrowserRouter([
       { path: baseUrl + 'fees-insurance', element: <Fees />, errorElement: <ErrorPage /> },
       { path: baseUrl + 'blog', element: <Blog />, errorElement: <ErrorPage /> },
       { path: baseUrl + 'specialties', element: <Specialties />, errorElement: <ErrorPage /> },
-      { path: baseUrl + 'contact', element: <Contact />, errorElement: <ErrorPage /> }
+      { path: baseUrl + 'contact', element: <Contact />, errorElement: <ErrorPage /> },
+      { path: baseUrl + 'services', element: <Services />, errorElement: <ErrorPage /> }
     ],
   },
 ]);
