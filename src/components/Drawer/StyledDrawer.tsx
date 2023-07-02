@@ -1,5 +1,5 @@
 import { styled } from 'styled-components';
-import { OpenOptions } from 'components/NavBar/NavBar';
+import { OpenOptions } from 'components/NavBar/utils-NavBar';
 const drawerWidth = '200px';
 const StyledDrawer = styled.div<{ $open: OpenOptions }>`
   position: fixed;
@@ -10,8 +10,8 @@ const StyledDrawer = styled.div<{ $open: OpenOptions }>`
   background-color: #a19d9d;
   width: ${drawerWidth};
   animation-name: ${(props) => props.$open};
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in;
   animation-fill-mode: forwards;
   @keyframes open {
     from {
