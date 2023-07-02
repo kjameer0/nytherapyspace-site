@@ -18,16 +18,17 @@ export default function NavBar() {
     window.addEventListener(
       'click',
       () => {
+        console.log('2');
         if (open !== '') setOpen('close');
       },
-      true
+      false
     );
   }, [open]);
 
   return (
     <StyledNavBar>
       <img className="logo" src={MobileLogo} alt="NY Therapy Space" />
-      <IconButton onClick={() => handleDrawerSwitch(open, setOpen)} className="hamburger">
+      <IconButton onClick={(e) => handleDrawerSwitch(e,open, setOpen)} className="hamburger">
         <MenuIcon fontSize="large" />
       </IconButton>
       <Drawer open={open} setOpen={setOpen} />

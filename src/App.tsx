@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <NavBar  />
-      <div style={{  height: '100%', backgroundColor: 'red', margin: 0 }}></div>
+      {/* <div style={{  height: '100%', backgroundColor: 'red', margin: 0 }}></div> */}
       <Outlet />
     </>
   );

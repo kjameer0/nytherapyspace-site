@@ -6,7 +6,6 @@ const StyledNavBar = styled.nav`
   z-index: 2;
   background-color: white;
   top: 0px;
-  outline: red solid 10px;
   min-height: 70px;
   height: 70px;
   width: 100%;
