@@ -3,8 +3,8 @@ import StyledHome from "./StyledHome";
 import VertGridPicture from 'assets/homepage_grid_phone_vert_230x610.webp';
 import HorizontalGridPic from 'assets/composite-grid-image-home.webp';
 import Logo from 'assets/therapy-space-mobile.png';
+import BaseButton from 'components/reusables/BaseButton';
 export default function Home() {
-
   return (
     <StyledHome>
       <img className="vert-pic" src={VertGridPicture} alt="grid of people and text" />
@@ -18,7 +18,7 @@ export default function Home() {
           <span className="adj-item">Genuine</span>
           <span className="adj-item">Therapy</span>
         </div>
-          <button>Book Now</button>
+        <BaseButton text={'Book Now'}></BaseButton>
       </div>
     </StyledHome>
   );
