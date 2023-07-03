@@ -21,7 +21,10 @@ const StyledNavBar = styled.nav`
     border: 0px solid blue;
     color: black;
   }
-  @media screen and (min-width: 380px) {
+  @media screen and (max-width: 600px) {
+    .logo {
+      visibility: hidden;
+    }
   }
 `;
 export default StyledNavBar;

@@ -9,7 +9,7 @@ import { Home, Blog, About, Specialties, Fees, Contact, Services } from 'compone
 
 const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?: boolean }>`
   :root {
-    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-family: semplicitapro sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -25,7 +25,6 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
     margin: 0;
     color: ${(props) => (props.$whiteColor ? 'white' : 'black')};
     background-color: ${(props) => (props.$blackBackground ? 'black' : 'white')};
-    height: 2000px;
     min-width: 375px;
   }
   #root {
