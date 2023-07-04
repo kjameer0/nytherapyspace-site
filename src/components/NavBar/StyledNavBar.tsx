@@ -16,7 +16,7 @@ const StyledNavBar = styled.nav`
   }
   .hamburger {
     position: absolute;
-    right: 0;
+    right: 10px;
     top: 15%;
     border: 0px solid blue;
     color: black;

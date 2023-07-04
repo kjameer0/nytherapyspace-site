@@ -8,8 +8,16 @@ import { createGlobalStyle } from 'styled-components';
 import { Home, Blog, About, Specialties, Fees, Contact, Services } from 'components/pages';
 
 const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?: boolean }>`
+@font-face {
+  font-family: semplicita;
+  src: url('public/fonts/semplicitapro/SemplicitaPro-Light.otf');
+}
+@font-face {
+  font-family: semplicita-bold;
+  src: url('public/fonts/semplicitapro/SemplicitaPro-Medium.otf');
+}
   :root {
-    font-family: semplicitapro sans-serif;
+    font-family: semplicita sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -19,6 +27,7 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
     min-width: 375px;
+    min-height: 667px;
     --primary-bg: red;
   }
   body {
@@ -26,6 +35,7 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
     color: ${(props) => (props.$whiteColor ? 'white' : 'black')};
     background-color: ${(props) => (props.$blackBackground ? 'black' : 'white')};
     min-width: 375px;
+    height: 1000px;
   }
   #root {
     height: 100%;
