@@ -10,6 +10,7 @@ const StyledNavBar = styled.nav`
   height: 70px;
   width: 100%;
   .logo {
+    visibility: hidden;
     margin-left: 10px;
     height: 69px;
     width: 69px;
@@ -21,9 +22,14 @@ const StyledNavBar = styled.nav`
     border: 0px solid blue;
     color: black;
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (min-width: 700px) {
+    margin-top: 30px;
+    margin-left: 30px;
     .logo {
-      visibility: hidden;
+      visibility: visible;
+    }
+    .hamburger {
+      display: none;
     }
   }
 `;
