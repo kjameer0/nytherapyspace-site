@@ -9,11 +9,11 @@ the navbar/drawer component will check length of
 that links anchors, and if there is at least one item
 in anchors, the component will show the subanchors
 */
-export type NavListItem = {
+export type NavListItemType = {
   label: string;
   path: string;
-  anchors: NavListItem[];
-}
+  anchors: NavListItemType[];
+};
 
 export const navLinkList = [
   {
@@ -41,13 +41,20 @@ export const navLinkList = [
     ],
   },
   {
-    label: 'home',
-    path: '',
-    anchors: [],
+    label: 'specialties',
+    path: 'specialties',
+    anchors: [
+      { path: '#mood-disorders', label: 'mood disorders' },
+      { path: '#complex-trauma', label: 'complex trauma' },
+      { path: '#teens-adolescents', label: 'teens &adolescents' },
+      { path: '#cultural-trauma-diaspora', label: 'cultural trauma & diaspora' },
+      { path: '#eating-disorders-body-image', label: 'eating disorders & body image' },
+      { path: '#dating-relationships', label: 'dating & relationships' },
+    ],
   },
   {
-    label: 'home',
-    path: '',
+    label: 'blog',
+    path: 'blog',
     anchors: [],
   },
 ];
