@@ -10,21 +10,20 @@ const StyledNavBar = styled.nav`
   height: 70px;
   width: 100%;
   .logo {
-    visibility: hidden;
-    margin-left: 10px;
+    margin-left: 13px;
+    margin-top: 5px;
     height: 69px;
     width: 69px;
   }
   .hamburger {
     position: absolute;
-    right: 10px;
-    top: 15%;
+    right: 4px;
+    top: 22%;
     border: 0px solid blue;
     color: black;
   }
   @media screen and (min-width: 700px) {
-    margin-top: 30px;
-    margin-left: 30px;
+    margin-bottom: 10px;
     .logo {
       visibility: visible;
     }

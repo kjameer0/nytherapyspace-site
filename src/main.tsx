@@ -58,6 +58,15 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
   #root {
     height: 100%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  nav {
+    flex-basis: 90%;
+  }
+  main {
+    flex-basis: 90%;
   }
 
 `;
