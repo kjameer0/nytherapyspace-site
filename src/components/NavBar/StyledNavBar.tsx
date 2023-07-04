@@ -21,7 +21,7 @@ const StyledNavBar = styled.nav`
     border: 0px solid blue;
     color: black;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     .logo {
       visibility: hidden;
     }

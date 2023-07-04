@@ -8,16 +8,32 @@ import { createGlobalStyle } from 'styled-components';
 import { Home, Blog, About, Specialties, Fees, Contact, Services } from 'components/pages';
 
 const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?: boolean }>`
-@font-face {
+  @font-face {
   font-family: semplicita;
-  src: url('public/fonts/semplicitapro/SemplicitaPro-Light.otf');
-}
-@font-face {
-  font-family: semplicita-bold;
-  src: url('public/fonts/semplicitapro/SemplicitaPro-Medium.otf');
-}
+  src: url('/fonts/semplicitapro/SemplicitaPro-Light.otf');
+  }
+  @font-face {
+    font-family: semplicita-med;
+    src: url('/fonts/semplicitapro/SemplicitaPro-Medium.otf');
+  }
+  @font-face {
+    font-family: semplicita-bold;
+    src: url('/fonts/semplicitapro/SemplicitaPro-Bold.otf');
+  }
+  @font-face {
+    font-family: cormorant-infant-semibold;
+    src: url('/Cormorant_Infant/CormorantInfant-SemiBold.ttf');
+  }
+  @font-face {
+    font-family: cormorant-infant-bold;
+    src: url('/Cormorant_Infant/CormorantInfant-Bold.ttf');
+  }
+  @font-face {
+    font-family: cormorant-infant-reg;
+    src: url('/Cormorant_Infant/CormorantInfant-Regular.ttf');
+  }
   :root {
-    font-family: semplicita sans-serif;
+    font-family: semplicita, sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -35,7 +51,9 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
     color: ${(props) => (props.$whiteColor ? 'white' : 'black')};
     background-color: ${(props) => (props.$blackBackground ? 'black' : 'white')};
     min-width: 375px;
-    height: 1000px;
+  }
+  p {
+    font-family: semplicita, sans-serif;
   }
   #root {
     height: 100%;
