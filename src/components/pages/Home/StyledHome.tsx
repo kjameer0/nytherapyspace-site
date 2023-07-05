@@ -2,12 +2,21 @@ import { styled } from 'styled-components';
 
 export default styled.main`
   width: 100vw;
+  position: relative;
+  top: 0;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -40px;
+  .img-wrapper {
+    flex-basis: 80%;
+    width: 300px;
+    z-index: 40;
+  }
   .logo-adj-wrapper {
+    margin-right: 30px;
     text-align: right;
+    flex-basis: 20%;
     font-weight: 300;
-    position: fixed;
-    top: 230px;
-    right: 22px;
     width: 20%;
     display: flex;
     flex-direction: column;
@@ -29,9 +38,8 @@ export default styled.main`
     flex-direction: column;
   }
   .vert-pic {
-    position: fixed;
-    top: 10px;
-    left: 15px;
+    position: relative;
+    display: block;
   }
   .hor-pic {
     display: none;
@@ -51,14 +59,18 @@ export default styled.main`
     font-family: cormorant-infant-reg, sans-serif;
   }
   @media screen and (min-width: 700px) {
+    margin-top: 0;
+    .img-wrapper {
+      display: none;
+    }
     .vert-pic {
       display: none;
     }
     .hor-pic {
-      position: relative;
-      top: 20px;
-      left: 30px;
       display: block;
+      position: relative;
+      flex-basis: 65%;
+      left: 0;
       width: 65%;
       height: auto;
     }
@@ -66,11 +78,12 @@ export default styled.main`
       display: none;
     }
     .logo-adj-wrapper {
-      text-align: right;
-      position: fixed;
-      top: 190px;
-      right: 22px;
-      width: 20%;
+      justify-self: flex-end;
+      flex-basis: 35%;
+      position: relative;
+      right: 0;
+      top: 0px;
+      width: auto;
       display: flex;
       flex-direction: column;
       align-items: flex-end;

@@ -7,7 +7,9 @@ import BaseButton from 'components/reusables/BaseButton';
 export default function Home() {
   return (
     <StyledHome>
-      <img className="vert-pic" src={VertGridPicture} alt="grid of people and text" />
+      <div className="img-wrapper">
+        <img className="vert-pic" src={VertGridPicture} alt="grid of people and text" />
+      </div>
       <img className="hor-pic" src={HorizontalGridPic} alt="grid of people and text" />
       <div className="logo-adj-wrapper">
         <img className="home-logo" src={Logo} alt="logo" />
