@@ -1,15 +1,17 @@
 import { styled } from 'styled-components';
-//figure out how to correctly size images
-const StyledNavBar = styled.nav`
+const StyledNavBar = styled.nav<{ $isTransparent: boolean }>`
   position: sticky;
   display: flex;
   z-index: 2;
-  background-color: white;
+  background-color: ${(props) => (props.$isTransparent ? 'transparent' : 'white')};
+  background-color: 'white';
   top: 0px;
   min-height: 70px;
   height: 70px;
   width: 100%;
   .logo {
+    visibility: ${(props) => (props.$isTransparent ? 'hidden' : 'visible')};
+    visibility: 'visible';
     margin-left: 13px;
     margin-top: 5px;
     height: 69px;

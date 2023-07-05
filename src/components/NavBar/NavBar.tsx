@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import StyledNavBar from './StyledNavBar';
 import { Drawer } from 'components/Drawer/index';
 //mui components
@@ -9,11 +10,19 @@ import MobileLogo from '../../assets/therapy-space-mobile.png';
 //utils
 import { OpenOptions, handleDrawerSwitch } from './utils-NavBar';
 
-
-
 export default function NavBar() {
   const [open, setOpen] = useState<OpenOptions>('');
-
+  const [isTransparent, setIsTransparent] = useState(false);
+  const location = useLocation();
+  useEffect(() => {
+    //logo needs to be invisible on home page
+    //set transparency based on the current page
+    if (location.pathname === '/') {
+      setIsTransparent(true);
+    } else {
+      setIsTransparent(false);
+    }
+  }, [location]);
   useEffect(() => {
     //a click anywhere on screen dismisses drawer
     window.addEventListener(
@@ -27,7 +36,7 @@ export default function NavBar() {
   }, [open]);
 
   return (
-    <StyledNavBar>
+    <StyledNavBar $isTransparent={isTransparent}>
       <img className="logo" src={MobileLogo} alt="NY Therapy Space" />
       <IconButton onClick={(e) => handleDrawerSwitch(e, open, setOpen)} className="hamburger">
         <MenuIcon fontSize="large" />

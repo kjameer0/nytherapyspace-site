@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Outlet } from 'react-router-dom';
 //components
 import NavBar from 'components/NavBar/index';

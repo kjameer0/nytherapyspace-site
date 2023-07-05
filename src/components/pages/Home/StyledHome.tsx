@@ -32,7 +32,6 @@ export default styled.main`
     position: fixed;
     top: 10px;
     left: 15px;
-    z-index: 100;
   }
   .hor-pic {
     display: none;
@@ -59,7 +58,6 @@ export default styled.main`
       position: relative;
       top: 20px;
       left: 30px;
-      z-index: 100;
       display: block;
       width: 65%;
       height: auto;
@@ -86,6 +84,5 @@ export default styled.main`
       font-size: 2rem;
       margin-top: 7px;
     }
-
   }
 `;

@@ -43,6 +43,7 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
     min-width: 375px;
+    max-width: 1440px;
     min-height: 667px;
     --primary-bg: red;
   }
@@ -67,6 +68,9 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
   }
   main {
     flex-basis: 90%;
+  }
+  .hero-image-container {
+    flex-basis: 100%;
   }
 
 `;

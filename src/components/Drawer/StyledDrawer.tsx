@@ -4,6 +4,7 @@ const drawerWidth = '200px';
 const StyledDrawer = styled.div<{ $open: OpenOptions }>`
   position: fixed;
   top: 0;
+  z-index: 3;
   background-attachment: scroll;
   right: calc(${drawerWidth} * -1);
   height: 100vh;
