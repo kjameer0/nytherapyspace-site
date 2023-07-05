@@ -67,12 +67,12 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
     flex-basis: 90%;
   }
   main {
-    flex-basis: 90%;
+    flex-basis: 100%;
+    padding-bottom: 40px;
   }
   .hero-image-container {
     flex-basis: 100%;
   }
-
 `;
 const baseUrl = '';
 const router = createBrowserRouter([
