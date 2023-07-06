@@ -2,6 +2,7 @@
 import StyledSpecialties from './StyledSpecialties';
 import HeroImage from 'components/HeroImage';
 import StyledContentSection from 'components/ContentSection/StyledContentSection';
+import BaseButton from 'components/reusables/BaseButton';
 //images
 import { WhiteNotebookImg } from 'assets';
 // const specialties
@@ -23,6 +24,14 @@ export default function Specialties() {
           towards a happier, more balanced life.
         </p>
       </StyledContentSection>
+      <div className="booking-box embark-box">
+        <p>
+          EMBARK on a <br className="line-break" />
+          TRANSFORMATIVE JOUNRNEY
+          <br className="line-break" /> of self-discovery and healing.
+        </p>
+        <BaseButton text={'Book Now'} />
+      </div>
     </StyledSpecialties>
   );
 }

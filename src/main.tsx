@@ -9,8 +9,8 @@ import { Home, Blog, About, Specialties, Fees, Contact, Services } from 'compone
 
 const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?: boolean }>`
   @font-face {
-  font-family: semplicita;
-  src: url('/fonts/semplicitapro/SemplicitaPro-Light.otf');
+    font-family: semplicita;
+    src: url('/fonts/semplicitapro/SemplicitaPro-Light.otf');
   }
   @font-face {
     font-family: semplicita-med;
@@ -23,6 +23,10 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
   @font-face {
     font-family: cormorant-infant-semibold;
     src: url('/Cormorant_Infant/CormorantInfant-SemiBold.ttf');
+  }
+  @font-face {
+    font-family: cormorant-infant-italic;
+    src: url('/Cormorant_Infant/CormorantInfant-Italic.ttf');
   }
   @font-face {
     font-family: cormorant-infant-bold;
@@ -64,7 +68,7 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
     flex-wrap: wrap;
   }
   nav {
-    flex-basis: 90%;
+    flex-basis: 100%;
   }
   main {
     flex-basis: 100%;
