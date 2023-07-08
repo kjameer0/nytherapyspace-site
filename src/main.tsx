@@ -71,7 +71,7 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
     flex-basis: 100%;
   }
   main {
-    flex-basis: 100%;
+    flex-basis: 90%;
     padding-bottom: 40px;
   }
   .hero-image-container {

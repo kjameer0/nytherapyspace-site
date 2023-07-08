@@ -1,8 +1,9 @@
 import { styled } from 'styled-components';
 
-export default styled.div<{ $imgLink: string }>`
+export default styled.div<{ $imgLink: string, color: 'white' | 'black' }>`
   position: relative;
   display: flex;
+  color: ${props => props.color};
   justify-content: center;
   align-items: center;
   height: clamp(130px, 20vw, 300px);
@@ -15,9 +16,10 @@ export default styled.div<{ $imgLink: string }>`
     width: 100%;
   }
   .single-word {
+    text-align: center;
     margin: 0;
-    margin-top: 6px;
+    margin-top: 7px;
     font-family: cormorant-infant-bold, sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 15%, 4rem);
   }
 `;
