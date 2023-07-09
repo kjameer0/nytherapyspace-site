@@ -36,11 +36,12 @@ export default function NavBar() {
       false
     );
   }, [open]);
-
+  //NavList activePage prop grabs the first part of URL pathname and
+  //passes it to NavList
   return (
     <StyledNavBar $isTransparent={isTransparent}>
       <img className="logo" src={MobileLogo} alt="NY Therapy Space" />
-      <NavList />
+      <NavList activePage={location.pathname.split('/')[1]}/>
       <IconButton onClick={(e) => handleDrawerSwitch(e, open, setOpen)} className="hamburger">
         <MenuIcon fontSize="large" />
       </IconButton>

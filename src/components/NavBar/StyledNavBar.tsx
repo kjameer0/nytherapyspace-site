@@ -3,8 +3,7 @@ const StyledNavBar = styled.nav<{ $isTransparent: boolean }>`
   position: sticky;
   display: flex;
   z-index: 2;
-  background-color: ${(props) => (props.$isTransparent ? 'transparent' : 'white')};
-  background-color: 'white';
+  background-color: white;
   top: 0px;
   min-height: 70px;
   height: 70px;
@@ -12,7 +11,7 @@ const StyledNavBar = styled.nav<{ $isTransparent: boolean }>`
   .logo {
     visibility: ${(props) => (props.$isTransparent ? 'hidden' : 'visible')};
     visibility: 'visible';
-    margin-left: 13px;
+    margin-left: 5%;
     margin-top: 5px;
     height: 69px;
     width: 69px;
