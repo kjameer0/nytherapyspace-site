@@ -17,7 +17,7 @@ import {
 export default function Specialties() {
   return (
     <StyledSpecialties>
-      <HeroImage color={'black'} imgLink={WhiteNotebookImg} text={['treatment', 'specialties']} />
+      <HeroImage color={'black'} id='treatment-specialties' imgLink={WhiteNotebookImg} text={['treatment', 'specialties']} />
       <StyledContentSection className="discover-content">
         <h2 className="large-heading">When you&apos;re ready to try something new</h2>
         <h3 className="small-heading">Discover the transformative power of therapy.</h3>
@@ -40,7 +40,7 @@ export default function Specialties() {
         </p>
         <BaseButton text={'Book Now'} />
       </div>
-      <HeroImage color={'white'} imgLink={MoodDisordersImg} text={['mood disorders']} />
+      <HeroImage id='mood-disorders' color={'white'} imgLink={MoodDisordersImg} text={['mood disorders']} />
       <div className="booking-box impact-box">
         <p>
           DISCOVER the <br className="line-break" />
@@ -59,7 +59,7 @@ export default function Specialties() {
           well-being today and discover the transformative impact of therapy.
         </p>
       </StyledContentSection>
-      <HeroImage color="white" imgLink={ComplexTraumaImg} text={['complex trauma']} />
+      <HeroImage id='complex-trauma' color="white" imgLink={ComplexTraumaImg} text={['complex trauma']} />
       <div className="blank-wrapper">
         <StyledContentSection className="heal-content">
           <h2 className="large-heading">Heal and Thrive</h2>
@@ -76,10 +76,9 @@ export default function Specialties() {
         </StyledContentSection>
         <div className="blank-space"></div>
       </div>
-      <HeroImage color="white" imgLink={TeenAdolescentImg} text={['teens &', 'adolescents']} />
+      <HeroImage id='teens-adolescents' color="white" imgLink={TeenAdolescentImg} text={['teens &', 'adolescents']} />
       <StyledContentSection className="growth-content">
         <h2 className="large-heading">Where healing and growth take center stage</h2>
-
         <p className="paragraph-content">
           We understand that adolescence can be a challenging time, and when combined with the
           impact of trauma, it can be even more overwhelming. I am here to provide the support and
@@ -107,6 +106,7 @@ export default function Specialties() {
         </p>
       </StyledContentSection>
       <HeroImage
+      id='cultural-trauma-diaspora'
         imgLink={CulturalImg}
         color="white"
         text={['cultural trauma,', 'diaspora &', 'social marginaliztion']}
@@ -134,6 +134,7 @@ export default function Specialties() {
         <BaseButton text={'Book Now'} />
       </div>
       <HeroImage
+      id='eating-disorders-body-image'
         imgLink={BodyImageImg}
         text={['eating disorders', '&', 'body image']}
         color={'white'}
@@ -161,7 +162,7 @@ export default function Specialties() {
         </p>
         <BaseButton text={'Book Now'} />
       </div>
-      <HeroImage color={'white'} imgLink={DatingImg} text={['dating', '&', 'relationships']} />
+      <HeroImage id='dating-relationships' color={'white'} imgLink={DatingImg} text={['dating', '&', 'relationships']} />
       <StyledContentSection className="build-content">
         <h2 className="large-heading">Build strong connections</h2>
         <h3 className="small-heading">Get back in sync with your person.</h3>
