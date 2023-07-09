@@ -6,6 +6,8 @@ import "./index.css";
 import { ErrorPage } from "ErrorPage";
 import { createGlobalStyle } from 'styled-components';
 import { Home, Blog, About, Specialties, Fees, Contact, Services } from 'components/pages';
+//constants
+import { baseUrl } from "project-constants";
 
 const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?: boolean }>`
   @font-face {
@@ -78,7 +80,6 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
     flex-basis: 100%;
   }
 `;
-const baseUrl = '';
 const router = createBrowserRouter([
   {
     path: baseUrl,

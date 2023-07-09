@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+//components
 import StyledNavBar from './StyledNavBar';
 import { Drawer } from 'components/Drawer/index';
+import NavList from 'components/NavList';
 //mui components
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -38,6 +40,7 @@ export default function NavBar() {
   return (
     <StyledNavBar $isTransparent={isTransparent}>
       <img className="logo" src={MobileLogo} alt="NY Therapy Space" />
+      <NavList />
       <IconButton onClick={(e) => handleDrawerSwitch(e, open, setOpen)} className="hamburger">
         <MenuIcon fontSize="large" />
       </IconButton>

@@ -1,2 +1,2 @@
-import NavListItem from './NavListItem';
-export default NavListItem;
+import StyledNavListItem from './StyledNavListItem';
+export default StyledNavListItem;
