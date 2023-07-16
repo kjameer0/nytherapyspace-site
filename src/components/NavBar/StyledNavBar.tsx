@@ -4,7 +4,8 @@ const StyledNavBar = styled.nav<{ $isTransparent: boolean }>`
   display: flex;
   z-index: 2;
   background-color: white;
-  background: ${(props) => (props.$isTransparent ? 'transparent' : 'white')};  top: 0px;
+  background: ${(props) => (props.$isTransparent ? 'transparent' : 'white')};
+  top: 0px;
   min-height: 70px;
   height: 70px;
   width: 100%;
