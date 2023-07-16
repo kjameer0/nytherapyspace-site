@@ -49,7 +49,7 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
     min-width: 375px;
-    max-width: 1440px;
+    /* max-width: 1440px; */
     min-height: 667px;
     --primary-bg: red;
   }
