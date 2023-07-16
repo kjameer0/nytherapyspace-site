@@ -10,7 +10,6 @@ export default styled.main`
   .img-wrapper {
     flex-basis: 80%;
     width: 300px;
-    z-index: 40;
   }
   .logo-adj-wrapper {
     margin-right: 30px;
