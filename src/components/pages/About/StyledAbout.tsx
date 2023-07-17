@@ -20,13 +20,9 @@ export default styled.main`
     margin: 0px 20px 0px 0px;
   }
   .opening-blurb {
-    /* display: flex; */
-    height: fit-content;
-    border: 1px solid red;
   }
   #my-clinical-style {
     display: flex;
-    /* margin-top: clamp(10px, 5%, 40px); */
     justify-content: flex-start;
     align-items: center;
   }
@@ -42,15 +38,17 @@ export default styled.main`
     visibility: hidden;
   }
   @media screen and (min-width: 700px) {
+    .opening-blurb {
+      position: relative;
+      margin-bottom: 40px;
+      height: fit-content;
+    }
     .opening-blurb img {
+      position: relative;
+      bottom: clamp(10px, 3vw, 35px);
       margin-right: 80px;
       width: calc(104px / 0.6);
       height: auto;
-    }
-    .opening-blurb {
-      margin-bottom: 40px;
-      /* border: 1px solid red; */
-      /* overflow: hidden; */
     }
     .opening-blurb p {
       columns: 2;
@@ -61,5 +59,8 @@ export default styled.main`
     .para-line-break {
       visibility: visible;
     }
+  }
+  h1 {
+    margin-left: 15%;
   }
 `;
