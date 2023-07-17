@@ -18,9 +18,9 @@ export default styled.div<{ $imgLink: string; color: 'white' | 'black' }>`
   .single-word {
     text-align: center;
     margin: 0;
-    margin-top: 7px;
     font-family: cormorant-infant-bold, sans-serif;
     font-size: clamp(2.5rem, 4vw, 4rem);
-    line-height: .7;
+    line-height: 0.8;
+    text-shadow: 3px 4px 3px black;
   }
 `;

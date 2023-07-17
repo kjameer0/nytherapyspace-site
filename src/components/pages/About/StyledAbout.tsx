@@ -22,8 +22,16 @@ export default styled.main`
   .opening-blurb {
     /* display: flex; */
   }
+  #color-note-img {
+    font-size: ;
+    display: flex;
+    margin-top: clamp(10px, 5%, 40px);
+    justify-content: flex-start;
+    align-items: center;
+  }
   #color-note-img .word-wrapper {
-    position: absolute;
+    margin-top: 3%;
+    margin-left: 25px;
     left: 0;
   }
   #color-note-img .single-word {

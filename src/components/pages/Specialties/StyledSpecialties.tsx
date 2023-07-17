@@ -49,6 +49,7 @@ export default styled.main`
 
   .impact-box {
     display: grid;
+    color: black;
     padding: 10px 10px 10px 10px;
     background: #c0cabb;
     min-height: 83px;
@@ -90,6 +91,12 @@ export default styled.main`
   }
   .build-content {
     flex-basis: 100%;
+  }
+  #cultural-trauma-diaspora .single-word {
+    font-size: 2.4rem;
+  }
+  #teens-adolescents .single-word {
+    line-height: 1;
   }
   @media screen and (min-width: 700px) {
     justify-content: space-between;
