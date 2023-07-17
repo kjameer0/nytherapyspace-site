@@ -53,6 +53,9 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
     min-height: 667px;
     --primary-bg: red;
   }
+  * {
+    /* outline: solid 1px red; */
+  }
   body {
     margin: 0;
     color: ${(props) => (props.$whiteColor ? 'white' : 'black')};
@@ -73,12 +76,18 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
     flex-basis: 100%;
   }
   main {
+    padding: 0;
     flex-basis: 90%;
     padding-bottom: 40px;
+    max-width: 1440px;
   }
   .hero-image-container {
     flex-basis: 100%;
   }
+  p {
+  font-size: 14px;
+  font-family: semplicita, sans-serif;
+}
 `;
 const router = createBrowserRouter([
   {

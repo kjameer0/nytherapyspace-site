@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import StyledNavBar from './StyledNavBar';
 import { Drawer } from 'components/Drawer/index';
 import NavList from 'components/NavList';
+import { NavLink } from 'react-router-dom';
 //mui components
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -40,8 +41,10 @@ export default function NavBar() {
   //passes it to NavList
   return (
     <StyledNavBar $isTransparent={isTransparent}>
-      <img className="logo" src={MobileLogo} alt="NY Therapy Space" />
-      <NavList activePage={location.pathname.split('/')[1]}/>
+      <NavLink to="/" className='logo'>
+        <img className="" src={MobileLogo} alt="NY Therapy Space" />
+      </NavLink>
+      <NavList activePage={location.pathname.split('/')[1]} />
       <IconButton onClick={(e) => handleDrawerSwitch(e, open, setOpen)} className="hamburger">
         <MenuIcon fontSize="large" />
       </IconButton>

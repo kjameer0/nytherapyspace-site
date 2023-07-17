@@ -12,16 +12,17 @@ const StyledNavBar = styled.nav<{ $isTransparent: boolean }>`
   .logo {
     visibility: ${(props) => (props.$isTransparent ? 'hidden' : 'visible')};
     visibility: 'visible';
-    margin-left: 5%;
     margin-top: 5px;
+    margin-left: 5%;
+  }
+  .logo > img {
     height: 69px;
     width: 69px;
   }
   .hamburger {
     position: absolute;
-    right: 4px;
+    right: 14px;
     top: 22%;
-    border: 0px solid blue;
     color: black;
   }
   @media screen and (min-width: 700px) {

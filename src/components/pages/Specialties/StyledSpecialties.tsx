@@ -174,7 +174,7 @@ export default styled.main`
     }
     .blank-space {
       background: rgb(206, 208, 202);
-      flex-basis: 35%;
+      flex-basis: 40%;
       height: 100%;
       top: 0;
       left: 0;

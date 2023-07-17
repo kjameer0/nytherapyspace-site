@@ -5,6 +5,9 @@ import TeenAdolescentImg from './specialties-images/darklockers_heroimage.webp';
 import CulturalImg from './specialties-images/crosswalk_heroimage.webp';
 import BodyImageImg from './specialties-images/storewindow_heroimage.webp';
 import DatingImg from './specialties-images/lights_heroimage.webp';
+import HeadshotImg from './Headshot.webp';
+import TaxiImg from './about-images/taxi_heroimage.webp';
+import ColorNotebookImg from './about-images/colorednotebook_heroimage.webp';
 export {
   WhiteNotebookImg,
   MoodDisordersImg,
@@ -13,4 +16,7 @@ export {
   CulturalImg,
   BodyImageImg,
   DatingImg,
+  HeadshotImg,
+  TaxiImg,
+  ColorNotebookImg,
 };

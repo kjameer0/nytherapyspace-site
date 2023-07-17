@@ -8,11 +8,12 @@ export default styled.main`
   justify-content: flex-start;
   margin-top: -40px;
   .img-wrapper {
-    flex-basis: 80%;
-    width: 300px;
+    flex-basis: 70%;
+    width: 280px;
+    margin-left: 10px;
   }
   .logo-adj-wrapper {
-    margin-right: 30px;
+    /* margin-right: 30px; */
     text-align: right;
     flex-basis: 20%;
     font-weight: 300;

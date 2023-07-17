@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 
 export default styled.footer`
-  position: fixed;
+  position: relative;
   bottom: 0;
   z-index: 400;
   background-color: #6c7c61;
