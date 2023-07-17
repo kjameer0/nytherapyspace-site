@@ -85,9 +85,14 @@ const GlobalStyle = createGlobalStyle<{ $whiteColor?: boolean; $blackBackground?
     flex-basis: 100%;
   }
   p {
-  font-size: 14px;
-  font-family: semplicita, sans-serif;
-}
+    font-size: 14px;
+    font-family: semplicita, sans-serif;
+  }
+  @media screen and (min-width: 700px){
+    p {
+      font-size: 1rem;
+    }
+  }
 `;
 const router = createBrowserRouter([
   {

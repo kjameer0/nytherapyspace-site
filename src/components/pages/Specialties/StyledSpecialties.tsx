@@ -21,7 +21,6 @@ export default styled.main`
     margin: 0;
   }
   .booking-box p {
-    font-size: 1.3rem;
     font-family: cormorant-infant-italic;
   }
   .booking-box button {
