@@ -12,7 +12,7 @@ export default styled.main`
     font-family: cormorant-infant-reg;
     font-size: 1.8rem;
   }
-  img {
+  .opening-blurb img {
     width: calc(104px / 1.1);
     height: calc(138px / 1.1);
     border: 1px solid #817e7e;
@@ -21,5 +21,12 @@ export default styled.main`
   }
   .opening-blurb {
     /* display: flex; */
+  }
+  #color-note-img .word-wrapper {
+    position: absolute;
+    left: 0;
+  }
+  #color-note-img .single-word {
+    text-align: left;
   }
 `;

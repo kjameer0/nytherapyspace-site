@@ -112,6 +112,7 @@ export default styled.main`
       color: white;
       font-weight: 600;
       border: 1px solid white;
+      padding: 40px auto;
     }
     .impact-box {
       height: auto;
@@ -207,6 +208,16 @@ export default styled.main`
     }
     .growth-content p:nth-of-type(4) {
       grid-area: para4;
+    }
+    .height-box {
+      height: clamp(400px, 80vw, 600px);
+    }
+    section {
+      align-self: center;
+    }
+    section p {
+      line-height: 2 !important;
+      margin: 0;
     }
   }
 `;

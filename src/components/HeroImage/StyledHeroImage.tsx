@@ -11,7 +11,7 @@ export default styled.div<{ $imgLink: string; color: 'white' | 'black' }>`
   background-image: url(${(props) => props.$imgLink});
   background-size: clamp(375px, 100%, 1440px) auto;
   scroll-margin-top: 70px;
-  width: 100vw;
+  width: 100%;
   .hero-image {
     width: 100%;
   }
